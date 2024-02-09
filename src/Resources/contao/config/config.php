@@ -1,5 +1,7 @@
 <?php
 
+use Bcs\RecaptchaBundle\FormRecaptcha;
+
 /**
  * @copyright  Bright Cliud Studio
  * @author     Bright Cloud Studio
@@ -13,9 +15,6 @@
     //    'recaptcha_v2' => 'Bcs\RecaptchaBundle\ContentRecaptchaV2'
     //));
 
-    array_insert($GLOBALS['TL_FFL']['recaptcha'], -1, array
-    (
-        'recaptcha' => 'Bcs\RecaptchaBundle\FormRecaptcha'
-    ));
+    array_insert($GLOBALS['TL_FFL']['recaptcha'], -1, FormRecaptcha::class);
 
 ?>
