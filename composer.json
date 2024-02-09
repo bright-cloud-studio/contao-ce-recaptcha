@@ -22,11 +22,11 @@
         "contao/core-bundle": "^4.13"
     },
     "extra":{
-        "contao-manager-plugin": "Bcs\\ReCaptchaBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Bcs\\RecaptchaBundle\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
-            "Bcs\\ReCaptchaBundle\\": "src"
+            "Bcs\\RecaptchaBundle\\": "src"
         },
         "classmap": [
             "src/Resources/contao"
