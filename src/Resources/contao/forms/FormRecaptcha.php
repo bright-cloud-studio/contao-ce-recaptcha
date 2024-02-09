@@ -47,6 +47,8 @@ class FormRecaptcha extends Widget
 	 */
 	public function generate()
 	{
+        $GLOBALS['TL_JAVASCRIPT'][] = '<script src="https://www.google.com/recaptcha/api.js"></script>';
+        
 		// Add the static files URL to images
 		if ($staticUrl = System::getContainer()->get('contao.assets.files_context')->getStaticUrl())
 		{
