@@ -10,6 +10,8 @@
 
 namespace Bcs\RecaptchaBundle;
 
+use Contao\Widget;
+
 /**
  * Class FormExplanation
  *
