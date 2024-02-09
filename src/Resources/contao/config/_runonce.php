@@ -1,6 +1,6 @@
 <?php
 
-  class ReCaptchaRunonceJobTemp extends Controller
+  class RecaptchaRunonceJobTemp extends Controller
   {
       public function __construct()
       {
