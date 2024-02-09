@@ -39,6 +39,15 @@ class FormRecaptcha extends Widget
 	public function validate()
 	{
 	}
+	
+
+	public function __construct($arrAttributes=null)
+	{
+	    // Include the recaptcha library
+        $GLOBALS['TL_BODY']['recaptcha'] = '<script src="https://www.google.com/recaptcha/api.js"></script>';
+	}
+	
+
 
 	/**
 	 * Generate the widget and return it as string
@@ -47,8 +56,7 @@ class FormRecaptcha extends Widget
 	 */
 	public function generate()
 	{
-        $GLOBALS['TL_JAVASCRIPT'][] = '<script src="https://www.google.com/recaptcha/api.js"></script>';
-        
+	    
 		// Add the static files URL to images
 		if ($staticUrl = System::getContainer()->get('contao.assets.files_context')->getStaticUrl())
 		{
