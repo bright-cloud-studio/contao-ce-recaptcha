@@ -8,10 +8,10 @@
  * @see	       https://github.com/bright-cloud-studio/contao-ce-recaptcha
  */
 
-namespace Bcs\ReCaptchaBundle;
+namespace Bcs\RecaptchaBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class BcsReCaptchaBundle extends Bundle
+class BcsRecaptchaBundle extends Bundle
 {
 }
