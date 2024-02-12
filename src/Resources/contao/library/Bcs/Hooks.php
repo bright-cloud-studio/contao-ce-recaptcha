@@ -11,5 +11,7 @@ class Hooks
     {
         //echo "BING BONG NOISE";
         //die();
+
+        return $fields;
     }
 }
