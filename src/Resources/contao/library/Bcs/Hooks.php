@@ -9,7 +9,7 @@ class Hooks
 
     public function onCompileFormFields($fields, $formId, $form)
     {
-      echo "BING BONG NOISE";
-      die();
+        //echo "BING BONG NOISE";
+        //die();
     }
 }
