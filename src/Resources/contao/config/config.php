@@ -14,5 +14,4 @@ array_insert($GLOBALS['TL_FFL']['recaptcha'], -1, FormRecaptcha::class);
 
 /* Hooks */
 $GLOBALS['TL_HOOKS']['compileFormFields'][]      = array('Bcs\Hooks', 'onCompileFormFields');
-$GLOBALS['TL_HOOKS']['prepareFormData'][]      = array('Bcs\Hooks', 'onPrepareFormData');
 ?>
