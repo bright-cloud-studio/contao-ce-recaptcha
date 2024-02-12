@@ -1,30 +1,26 @@
 <?php
 
-/**
- * @copyright  Bright Cliud Studio
- * @author     Bright Cloud Studio
- * @package    Contao CE Recaptcha
- * @license    LGPL-3.0+
- * @see	       https://github.com/bright-cloud-studio/contao-ce-recaptcha
- */
+// alter palette for use with reCaptcha V3
+$GLOBALS['TL_DCA']['tl_form_field']['config']['onload_callback'][] = function() {
 
-// Set up a pallette for our custom Form Element
-$GLOBALS['TL_DCA']['tl_form_field']['palettes']['recaptcha'] = '{type_legend},type;{recaptcha_legend},site_key;{expert_legend:hide},class;{template_legend:hide},customTpl;{invisible_legend:hide},invisible';
+    if( \Config::get('recaptchaType') != 'recaptcha3' ) {
+        return;
+    }
 
+    $GLOBALS['TL_DCA']['tl_form_field']['palettes']['captcha'] = str_replace('{fconfig_legend},', '{fconfig_legend},recaptcha3_threshold,recaptcha3_action,', $GLOBALS['TL_DCA']['tl_form_field']['palettes']['captcha']);
+};
 
-// Get the original form dca
-$dc = &$GLOBALS['TL_DCA']['tl_form_field'];
-
-// create a new array with our new fields
-$arrFields = array(
-    'site_key'                => array(
-        'label'                => &$GLOBALS['TL_LANG']['tl_form_field']['site_key'],
-        'inputType'            => 'text',
-        'eval'                 => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-        'sql'                  => "varchar(255) NOT NULL default ''"
-    )
-);
-
-// smash-um-up
-$dc['fields'] = array_merge($dc['fields'], $arrFields);
-
+$GLOBALS['TL_DCA']['tl_form_field']['fields'] += [
+    'recaptcha3_threshold' => [
+        'label'             => &$GLOBALS['TL_LANG']['tl_form_field']['recaptcha3_threshold'],
+        'inputType'         => 'text',
+        'sql'               => "varchar(8) NOT NULL default ''",
+        'eval'              => ['tl_class' => 'w50 clr'],
+    ],
+    'recaptcha3_action' => [
+        'label'             => &$GLOBALS['TL_LANG']['tl_form_field']['recaptcha3_action'],
+        'inputType'         => 'text',
+        'sql'               => "varchar(120) NOT NULL default ''",
+        'eval'              => ['tl_class' => 'w50', 'rgxp' => 'recaptcha']
+    ],
+];
