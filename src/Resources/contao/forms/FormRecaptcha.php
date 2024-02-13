@@ -20,7 +20,7 @@ class FormRecaptcha extends FormCaptcha
     {
         parent::__construct($arrAttributes);
 
-        $GLOBALS['TL_CSS'][] = 'bundles/BcsRecaptchaBundle/styles/contao_ce_recaptcha.css';
+        $GLOBALS['TL_CSS'][] = 'bundles/bcsrecaptcha/styles/contao_ce_recaptcha.css';
         
 
         $this->recaptchaType = Config::get('recaptchaType'); 
