@@ -22,8 +22,8 @@ $GLOBALS['TL_DCA']['tl_settings']['fields'] += [
         'options_callback'  => function ()
         {
             return [
-                'invisible' => 'reCAPTCHA v2: Invisible',
-                'recaptcha2' => 'reCAPTCHA v2: Checkbox',
+                //'invisible' => 'reCAPTCHA v2: Invisible',
+                //'recaptcha2' => 'reCAPTCHA v2: Checkbox',
                 'recaptcha3' => 'reCAPTCHA v3',
             ];
         },
