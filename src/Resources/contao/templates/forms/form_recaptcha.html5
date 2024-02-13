@@ -5,7 +5,7 @@
         <p class="error"><?= $this->getErrorAsString() ?></p>
     <?php endif; ?>
 
-    <div style="display: none;" class="g-recaptcha"
+    <div class="g-recaptcha"
         id="recaptcha-<?= $this->strCaptchaKey ?>"
         data-sitekey="<?= $this->publicKey ?>"
         data-callback="onSubmit_<?= $this->strCaptchaKey ?>"
