@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] = str_replace('{files_legend', '{recaptcha_legend},recaptchaType;{files_legend', $GLOBALS['TL_DCA']['tl_settings']['palettes']['default']);
+$GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] = str_replace('{files_legend', '{recaptcha_legend},recaptchaType,recaptcha3GlobalThreshold;{files_legend', $GLOBALS['TL_DCA']['tl_settings']['palettes']['default']);
 
 $GLOBALS['TL_DCA']['tl_settings']['config']['onload_callback'][] = function() {
 
