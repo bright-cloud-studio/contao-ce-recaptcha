@@ -27,7 +27,7 @@ $GLOBALS['TL_DCA']['tl_settings']['fields'] += [
                 'recaptcha3' => 'reCAPTCHA v3',
             ];
         },
-        'eval'              => ['tl_class' => 'w50', 'chosen' => true, 'submitOnChange' => true],
+        'eval'              => ['tl_class' => 'w50', 'chosen' => true, 'submitOnChange' => true, 'default' => 'recaptcha3'],
     ],
     'recaptchaPublicKey' => [
         'label'             => &$GLOBALS['TL_LANG']['tl_settings']['recaptchaPublicKey'],
