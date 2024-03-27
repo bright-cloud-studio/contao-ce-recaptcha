@@ -9,6 +9,7 @@
 */
 
 use Bcs\RecaptchaBundle\FormRecaptcha;
+use Bcs\RecaptchaBundle\ElementRecaptcha;
 
 // Setup our Form field
 array_insert($GLOBALS['TL_FFL']['recaptcha'], -1, FormRecaptcha::class);
