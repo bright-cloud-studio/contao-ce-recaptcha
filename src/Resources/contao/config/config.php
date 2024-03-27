@@ -10,6 +10,10 @@
 
 use Bcs\RecaptchaBundle\FormRecaptcha;
 
+// Setup our Form field
 array_insert($GLOBALS['TL_FFL']['recaptcha'], -1, FormRecaptcha::class);
+
+// Setup our background content element
+array_insert($GLOBALS['TL_CTE']['miscellaneous'], 0, ElementRecaptcha::class);
 
 ?>
