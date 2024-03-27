@@ -1,6 +1,6 @@
 <?php
 
-namespace Contao;
+namespace Bcs;
 
 class ElementRecaptcha extends ContentElement
 {
