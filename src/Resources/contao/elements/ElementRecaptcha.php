@@ -4,7 +4,7 @@ namespace Contao;
 
 class ElementRecaptcha extends ContentElement
 {
-    protected $strTemplate = 'ce_recaptcha_bg';
+    protected $strTemplate = 'ce_recaptcha_background';
 
     protected function compile()
     {
