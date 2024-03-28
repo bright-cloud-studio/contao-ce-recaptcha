@@ -2,7 +2,11 @@
 
 namespace Bcs;
 
-class ElementRecaptcha extends ContentElement
+use Contao;
+
+
+
+class ElementRecaptcha extends \ContentElement
 {
     protected $strTemplate = 'ce_recaptcha_background';
 
@@ -18,9 +22,9 @@ class ElementRecaptcha extends ContentElement
     protected function generateBackendOutput()
     {
         $this->strTemplate          = 'be_wildcard';
-        $this->Template             = new BackendTemplate($this->strTemplate);
+        $this->Template             = new \BackendTemplate($this->strTemplate);
 
-        if (Config::get('recaptchaType') == 'recaptcha3') {
+        if (\Config::get('recaptchaType') == 'recaptcha3') {
             $actionString = $GLOBALS['TL_LANG']['tl_content']['recaptcha_action'][0];
             $this->Template->wildcard = '<strong>' . $actionString . ':</strong> ' . $this->recaptcha_action;
         } else {
@@ -31,8 +35,8 @@ class ElementRecaptcha extends ContentElement
     protected function generateFrontendOutput()
     {
         $this->Template->id = $this->id;
-        $this->Template->recaptchaType = Config::get('recaptchaType');
-        $this->Template->publicKey  = Config::get('recaptchaPublicKey'); 
+        $this->Template->recaptchaType = \Config::get('recaptchaType');
+        $this->Template->publicKey  = \Config::get('recaptchaPublicKey'); 
         $this->Template->action = $this->recaptcha_action; 
     }
 }
