@@ -6,7 +6,7 @@ class Handler
 {
     protected static $arrUserOptions = array();
     
-    public function onCompileFormFields($submittedData, $formData, $files, $labels, $form)
+    public function onCompileFormFields($fields, $formId, $form)
     {
         
         echo "Hook 'onCompileFormFields' triggered!";
