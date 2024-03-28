@@ -18,4 +18,5 @@ array_insert($GLOBALS['TL_CTE']['miscellaneous'], 0, [
     'backgroundrecaptcha' => Bcs\ElementRecaptcha::class,
 ]);
 
-?>
+/* Hooks */
+$GLOBALS['TL_HOOKS']['compileFormFields'][]      = array('Bcs\Handler', 'onCompileFormFields');
