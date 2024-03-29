@@ -20,3 +20,4 @@ array_insert($GLOBALS['TL_CTE']['miscellaneous'], 0, [
 
 /* Hooks */
 $GLOBALS['TL_HOOKS']['compileFormFields'][]      = array('Bcs\Handler', 'onCompileFormFields');
+$GLOBALS['TL_HOOKS']['prepareFormData'][]      = array('Bcs\Handler', 'onPrepareFormData');
