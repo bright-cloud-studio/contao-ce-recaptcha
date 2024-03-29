@@ -5,6 +5,18 @@ namespace Bcs;
 class Handler
 {
     protected static $arrUserOptions = array();
+
+
+
+    public function onPrepareFormData(&$submittedData, $labels, $fields, $form)
+    {
+        echo "Hook 'onPrepareFormData' triggered!";
+        die();
+    }
+
+
+
+
     
     public function onCompileFormFields($fields, $formId, $form)
     {
