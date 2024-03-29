@@ -17,8 +17,3 @@ array_insert($GLOBALS['TL_FFL']['recaptcha'], -1, FormRecaptcha::class);
 array_insert($GLOBALS['TL_CTE']['miscellaneous'], 0, [
     'backgroundrecaptcha' => Bcs\ElementRecaptcha::class,
 ]);
-
-/* Hooks */
-$GLOBALS['TL_HOOKS']['compileFormFields'][]      = array('Bcs\Handler', 'onCompileFormFields');
-$GLOBALS['TL_HOOKS']['prepareFormData'][]      = array('Bcs\Handler', 'onPrepareFormData');
-$GLOBALS['TL_HOOKS']['validateFormField'][]      = array('Bcs\Handler', 'onValidateFormFields');
