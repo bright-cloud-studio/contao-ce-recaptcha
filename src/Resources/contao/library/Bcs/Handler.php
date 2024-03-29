@@ -8,6 +8,19 @@ class Handler
 
 
 
+    public function onValidateFormField($widget, $formId, $formData, $form)
+    {
+        if ('tl_registration_52' === $formId && $widget instanceof \Contao\FormSubmit) {
+            echo "bing";
+            die();
+        }
+
+        return $widget;
+    }
+
+    
+    
+    
     public function onPrepareFormData(&$submittedData, $labels, $fields, $form)
     {
         echo "Hook 'onPrepareFormData' triggered!";
