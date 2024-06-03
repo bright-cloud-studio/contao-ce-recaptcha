@@ -4,7 +4,9 @@ $GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] = str_replace('{files_l
 
 $GLOBALS['TL_DCA']['tl_settings']['config']['onload_callback'][] = function() {
 
-    switch( \Config::get('recaptchaType') ) {
+    $type = 'recaptcha3';
+    
+    switch($type) {
 
         case 'recaptcha3':
             $GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] = str_replace('recaptcha3GlobalThreshold','recaptcha3GlobalThreshold,recaptchaPublicKey,recaptchaPrivateKey', $GLOBALS['TL_DCA']['tl_settings']['palettes']['default']);
