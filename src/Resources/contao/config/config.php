@@ -11,9 +11,16 @@
 use Bcs\RecaptchaBundle\FormRecaptcha;
 
 // Setup our Form field
-array_insert($GLOBALS['TL_FFL']['recaptcha'], -1, FormRecaptcha::class);
+//array_insert($GLOBALS['TL_FFL']['recaptcha'], -1, FormRecaptcha::class);
+$GLOBALS['TL_FFL']['recaptcha'] = 'Bcs\RecaptchaBundle\FormRecaptcha';
+
+
 
 // Setup our background content element
-array_insert($GLOBALS['TL_CTE']['miscellaneous'], 0, [
-    'backgroundrecaptcha' => Bcs\ElementRecaptcha::class,
-]);
+//array_insert($GLOBALS['TL_CTE']['miscellaneous'], 0, [
+//    'backgroundrecaptcha' => Bcs\ElementRecaptcha::class,
+//]);
+
+$GLOBALS['TL_CTE']['miscellaneous'][0] = array(
+	'backgroundrecaptcha' => Bcs\ElementRecaptcha::class
+);
