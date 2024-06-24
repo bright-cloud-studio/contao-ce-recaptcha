@@ -1,15 +1,7 @@
 <?php
 
-use Contao\Config;
-
-
 // alter palette for use with reCaptcha V3
 $GLOBALS['TL_DCA']['tl_form_field']['config']['onload_callback'][] = function() {
-
-    if( Config::get('recaptchaType') != 'recaptcha3' ) {
-        return;
-    }
-
     $GLOBALS['TL_DCA']['tl_form_field']['palettes']['recaptcha'] = str_replace('{fconfig_legend},', '{fconfig_legend},recaptcha3_threshold,recaptcha3_action,', $GLOBALS['TL_DCA']['tl_form_field']['palettes']['captcha']);
 };
 
