@@ -21,6 +21,6 @@ $GLOBALS['TL_FFL']['recaptcha'] = 'Bcs\RecaptchaBundle\FormRecaptcha';
 //    'backgroundrecaptcha' => Bcs\ElementRecaptcha::class,
 //]);
 
-$GLOBALS['TL_CTE']['miscellaneous'][0] = array(
+$GLOBALS['TL_CTE']['miscellaneous']['recaptcha'] = array(
 	'backgroundrecaptcha' => Bcs\ElementRecaptcha::class
 );
